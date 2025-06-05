@@ -40,9 +40,7 @@ fun ContentNewsList(
     modifier: Modifier,
     article: Article
 ) {
-    Card(
-        modifier = modifier
-    ) {
+    Card(modifier = modifier) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()

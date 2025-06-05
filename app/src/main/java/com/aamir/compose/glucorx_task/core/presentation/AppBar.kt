@@ -13,9 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppBar(
-    title: String = "Home",
-) {
+fun AppBar(title: String) {
     TopAppBar(
         title = {
             Text(

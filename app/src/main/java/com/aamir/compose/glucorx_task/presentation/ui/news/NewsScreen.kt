@@ -17,9 +17,7 @@ import com.aamir.compose.glucorx_task.presentation.ui.news.components.ErrorMessa
 import com.aamir.compose.glucorx_task.presentation.ui.news.components.NewsList
 
 @Composable
-fun NewsScreenRoot(
-    viewModel: NewsViewModel,
-) {
+fun NewsScreenRoot(viewModel: NewsViewModel) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     NewsScreen(
         uiState = uiState,
