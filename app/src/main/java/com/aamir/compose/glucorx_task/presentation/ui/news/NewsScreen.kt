@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -34,16 +33,21 @@ fun NewsScreen(
 ) {
     Scaffold() { innerPadding ->
         Box(
-            modifier = modifier.padding(innerPadding)
+            modifier = modifier
+                .padding(innerPadding)
                 .fillMaxSize()
                 .background(Color.White)
         ) {
             when (uiState) {
-                is NewsUiState.Loading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                is NewsUiState.Loading -> CircularProgressIndicator(
+                    modifier = Modifier.align(
+                        Alignment.Center
+                    )
+                )
+
                 is NewsUiState.Error -> ErrorMessage(uiState.message)
-                is NewsUiState.Success -> NewsList((uiState).articles)
+                is NewsUiState.Success -> NewsList(uiState.articles)
             }
         }
     }
-
 }
