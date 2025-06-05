@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.aamir.compose.glucorx_task.core.presentation.AppBar
 import com.aamir.compose.glucorx_task.presentation.ui.news.components.ErrorMessage
 import com.aamir.compose.glucorx_task.presentation.ui.news.components.NewsList
 
@@ -31,7 +32,9 @@ fun NewsScreen(
     uiState: NewsUiState,
     modifier: Modifier = Modifier,
 ) {
-    Scaffold() { innerPadding ->
+    Scaffold(
+        topBar = { AppBar(title = "GlucoRX-Task") }
+    ) { innerPadding ->
         Box(
             modifier = modifier
                 .padding(innerPadding)
