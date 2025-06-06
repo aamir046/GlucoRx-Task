@@ -57,7 +57,7 @@ fun ContentNewsList(
 
 @Preview(apiLevel = 34, showBackground = true, device = Devices.PIXEL)
 @Composable
-fun HorizontalBooksListingPreview() {
+fun NewsListingPreview() {
     Surface {
         NewsList(
             listOf(
